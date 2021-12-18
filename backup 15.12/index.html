@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมคำนวณเงินออม</title>
+    
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+body
+{
+    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_06/2746941/190208-stock-money-fanned-out-ew-317p.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 align = "center"><b>โปรแกรมคำนวณเงินออม ดอกเบี้ย</b></h1>
+    
+    <table align="center">
+    <!-- input ทั้งหมด -->
+        <tr>
+            <th><strong>ยอดเงินออม ต่อเดือน : </strong>></th>
+            <th><input id = "money" type="text" placeholder="กรอกยอดเงิน..."></th> 
+            <br>
+        </tr>
+
+        <tr>
+            <th><strong>จำนวนปีที่ออม : </strong>></th>
+            <th><input id = "year" type="text"placeholder="จำนวนปี..."></th>
+            <br>
+        </tr>
+    
+        <tr>
+        <th><strong>ดอกเบี้ยต่อปี : </strong>></th> 
+        <th><input id = "rate" type="text"placeholder = "ดอกเบี้ย %"></th>
+        </tr>
+        
+        <!-- ปุ่มดำเนินการ -->
+        <tr>
+        <th align="center"><button type="button" class="btn btn-danger" onclick = 'final(document.getElementById("money").value , document.getElementById("year").value , document.getElementById("rate").value)' title="กดเพื่อคำนวณ!!">คำนวณ!!</button>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <table align="center">
+        <tr>
+        <th>เงินที่คุณจะได้ เมื่อออมเงิน :>>
+        <dev id = "rateperyear"></p></dev>
+        <br>
+        </tr>
+        
+        <tr>
+            <th>ดอกเบี้ยต่อปีที่คุณได้ทั้งหมด :>>
+            <dev id = "rateall"></p></dev>
+        </tr>
+    </table>    
+        
+        <script src = "app.js"></script>
+
+
+</body>
+</html>
